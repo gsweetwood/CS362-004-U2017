@@ -1,0 +1,136 @@
+        -:    0:Source:unittest1.c
+        -:    0:Graph:unittest1.gcno
+        -:    0:Data:unittest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:
+        -:    2:
+        -:    3:
+        -:    4:
+        -:    5:
+        -:    6:
+        -:    7:#include "dominion.h"
+        -:    8:#include "dominion_helpers.h"
+        -:    9:#include <string.h>
+        -:   10:#include <stdio.h>
+        -:   11:#include <assert.h>
+        -:   12:#include "rngs.h"
+        -:   13:#include <stdlib.h>
+        -:   14:
+        1:   15:int main(int argc, char** argv) {
+        -:   16:	
+        -:   17:	int r;
+        -:   18:
+       10:   19:	int asserttrue(int* k,int x) {
+        -:   20:		
+       10:   21:		switch (x) {
+        -:   22:		case 0:
+        1:   23:			if (k[0] == adventurer) {
+        1:   24:				r = 1;
+        -:   25:			}
+    #####:   26:			else { r = 0; }
+        -:   27:			
+        1:   28:			break;
+        -:   29:		case 1:
+        1:   30:			if (k[1] == outpost) {
+        1:   31:				r = 1;
+        -:   32:			}
+    #####:   33:			else { r = 0; }
+        -:   34:			
+        1:   35:			  break;
+        -:   36:		case 2:
+        1:   37:			if (k[2] == minion) {
+        1:   38:				r = 1;
+        -:   39:			}
+    #####:   40:			else { r = 0; }
+        -:   41:			
+        1:   42:			  break;
+        -:   43:		case 3:
+        1:   44:			if (k[3] == mine) {
+        1:   45:				r = 1;
+        -:   46:			}
+    #####:   47:			else { r = 0; }
+        -:   48:			
+        1:   49:			  break;
+        -:   50:		case 4:
+        1:   51:			if (k[4] == council_room) {
+        1:   52:				r = 1;
+        -:   53:			}
+    #####:   54:			else { r = 0; }
+        -:   55:			
+        1:   56:			  break;
+        -:   57:		case 5:
+        1:   58:			if (k[5] == smithy) {
+        1:   59:				r = 1;
+        -:   60:			}	
+    #####:   61:			else { r = 0; }
+        -:   62:			
+        1:   63:			  break;
+        -:   64:		case 6:
+        1:   65:			if (k[6] == gardens) {
+        1:   66:				r = 1;
+        -:   67:			}
+    #####:   68:			else { r = 0; }
+        -:   69:			
+        1:   70:			  break;
+        -:   71:		case 7:
+        1:   72:			if (k[7] == embargo) {
+        1:   73:				r = 1;
+        -:   74:			}
+    #####:   75:			else { r = 0; }
+        -:   76:			
+        1:   77:			  break;
+        -:   78:		case 8:
+        1:   79:			if (k[8] == steward) {
+        1:   80:				r = 1;
+        -:   81:			}
+    #####:   82:			else { r = 0; }
+        -:   83:			
+        1:   84:			  break;
+        -:   85:		case 9:
+        1:   86:			if (k[9] == cutpurse) {
+        1:   87:				r = 1;
+        -:   88:			}
+    #####:   89:			else { r = 0; }
+        -:   90:			
+        1:   91:			  break;
+    #####:   92:		default: r = 0;
+        -:   93:		}
+        -:   94:
+       10:   95:	}
+        -:   96:
+        1:   97:	printf("Testing kingdomCards():\n");
+        -:   98:
+        1:   99:	int* k =kingdomCards(
+        -:  100:		adventurer,
+        -:  101:		outpost,
+        -:  102:		minion,
+        -:  103:		mine,
+        -:  104:		council_room,
+        -:  105:		smithy,
+        -:  106:		gardens,
+        -:  107:		embargo,
+        -:  108:		steward,
+        -:  109:		cutpurse
+        -:  110:
+        1:  111:	);
+        -:  112:
+        -:  113:	int i;	
+        -:  114:	
+       11:  115:	for (i = 0; i < 10; i++) {
+       10:  116:		r = asserttrue(k, i);
+        -:  117:	}
+        -:  118:
+        1:  119:	free(k);
+        -:  120:
+        1:  121:	if (r == 1) {
+        1:  122:		printf("TEST SUCCESSFULLY COMPLETED\n");
+        -:  123:	}
+        -:  124:	else {
+    #####:  125:		printf("TEST FAILED\n");
+        -:  126:	}
+        -:  127:	
+        -:  128:
+        1:  129:	return 0;
+        -:  130:
+        -:  131:}

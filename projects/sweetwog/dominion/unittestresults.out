@@ -1,0 +1,81 @@
+“Results for unit tests:”
+“unittest1.c”
+Testing kingdomCards():
+TEST SUCCESSFULLY COMPLETED
+File 'dominion.c'
+Lines executed:2.25% of 579
+Branches executed:0.00% of 417
+Taken at least once:0.00% of 417
+Calls executed:0.00% of 94
+dominion.c:creating 'dominion.c.gcov'
+
+“unittest2.c”
+Testing isGameOver(): 
+TEST SUCCESSFULLY COMPLETED
+File 'dominion.c'
+Lines executed:17.27% of 579
+Branches executed:17.75% of 417
+Taken at least once:14.63% of 417
+Calls executed:7.45% of 94
+dominion.c:creating 'dominion.c.gcov'
+
+“unittest3.c”
+Testing compare(): 
+TEST SUCCESSFULLY COMPLETED
+File 'dominion.c'
+Lines executed:1.04% of 579
+Branches executed:0.96% of 417
+Taken at least once:0.96% of 417
+Calls executed:0.00% of 94
+dominion.c:creating 'dominion.c.gcov'
+
+“unittest4.c”
+Testing supplyCount(): 
+TEST SUCCESSFULLY COMPLETED
+File 'dominion.c'
+Lines executed:15.54% of 579
+Branches executed:15.83% of 417
+Taken at least once:12.95% of 417
+Calls executed:7.45% of 94
+dominion.c:creating 'dominion.c.gcov'
+
+“cardtest1.c”
+Testing smithy: 
+TEST FAILED
+File 'dominion.c'
+Lines executed:20.90% of 579
+Branches executed:23.26% of 417
+Taken at least once:14.39% of 417
+Calls executed:12.77% of 94
+dominion.c:creating 'dominion.c.gcov'
+
+“cardtest2.c”
+Testing card: adventurer
+ TEST FAILED
+File 'dominion.c'
+Lines executed:19.69% of 579
+Branches executed:23.26% of 417
+Taken at least once:14.39% of 417
+Calls executed:11.70% of 94
+dominion.c:creating 'dominion.c.gcov'
+
+“cardtest3.c”
+Testing card: gardens
+TEST SUCCESSFULLY COMPLETED
+File 'dominion.c'
+Lines executed:17.44% of 579
+Branches executed:21.34% of 417
+Taken at least once:13.19% of 417
+Calls executed:8.51% of 94
+dominion.c:creating 'dominion.c.gcov'
+
+“cardtest4.c”
+Testing card: great_hall
+TEST SUCCESSFULLY COMPLETED
+File 'dominion.c'
+Lines executed:17.96% of 579
+Branches executed:17.27% of 417
+Taken at least once:13.43% of 417
+Calls executed:10.64% of 94
+dominion.c:creating 'dominion.c.gcov'
+
