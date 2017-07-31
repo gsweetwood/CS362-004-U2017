@@ -1,0 +1,8 @@
+Results for randomtestcard2: 
+TEST SUCCESSFULLY COMPLETEDFile 'dominion.c'
+Lines executed:17.44% of 579
+Branches executed:21.34% of 417
+Taken at least once:13.43% of 417
+Calls executed:8.51% of 94
+dominion.c:creating 'dominion.c.gcov'
+

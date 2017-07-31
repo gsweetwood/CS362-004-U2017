@@ -1,0 +1,9 @@
+Results for randomtestadventurer: 
+TEST COMPLETE, FOUND 2989 ERRORS
+File 'dominion.c'
+Lines executed:22.63% of 579
+Branches executed:25.66% of 417
+Taken at least once:17.03% of 417
+Calls executed:12.77% of 94
+dominion.c:creating 'dominion.c.gcov'
+

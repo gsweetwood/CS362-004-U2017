@@ -77,6 +77,38 @@ cardtest3: cardtest3.c dominion.o rngs.o interface.o
 cardtest4: cardtest4.c dominion.o rngs.o interface.o
 	gcc -o cardtest4 cardtest4.c -g dominion.o rngs.o interface.o $(CFLAGS)
 
+randomtestcard1: randomtestcard1.c dominion.o rngs.o interface.o
+	gcc -o randomtestcard1 randomtestcard1.c -g dominion.o rngs.o interface.o $(CFLAGS)
+
+randomtestcard2: randomtestcard2.c dominion.o rngs.o interface.o
+	gcc -o randomtestcard2 randomtestcard2.c -g dominion.o rngs.o interface.o $(CFLAGS)
+
+randomtestadventurer: randomtestadventurer.c dominion.o rngs.o interface.o
+	gcc -o randomtestadventurer randomtestadventurer.c -g dominion.o rngs.o interface.o $(CFLAGS)
+
+randomtestadventurer.out: randomtestadventurer.c dominion.c rngs.o interface.o
+	echo "Results for randomtestadventurer: " > randomtestadventurer.out
+
+	
+	gcc -o randomtestadventurer randomtestadventurer.c -g dominion.c rngs.o interface.o $(CFLAGS)
+	./randomtestadventurer >> randomtestadventurer.out
+	gcov -b dominion.c >> randomtestadventurer.out
+
+randomtestcard2.out: randomtestcard2.c dominion.c rngs.o interface.o
+	echo "Results for randomtestcard2: " > randomtestcard2.out
+
+	gcc -o randomtestcard2 randomtestcard2.c -g dominion.c rngs.o interface.o $(CFLAGS)
+	./randomtestcard2 >> randomtestcard2.out
+	gcov -b dominion.c >> randomtestcard2.out
+
+randomtestcard1.out: randomtestcard1.c dominion.c rngs.o interface.o
+	echo "Results for randomtestcard1: " > randomtestcard1.out
+
+	gcc -o randomtestcard1 randomtestcard1.c -g dominion.c rngs.o interface.o $(CFLAGS)
+	./randomtestcard1 >> randomtestcard1.out
+	gcov -b dominion.c >> randomtestcard1.out
+
+
 
 unittestresults.out: cardtest1.c cardtest2.c cardtest3.c cardtest4.c unittest1.c unittest2.c unittest3.c unittest4.c dominion.c rngs.o interface.o
 	echo “Results for unit tests:” > unittestresults.out
@@ -121,4 +153,4 @@ unittestresults.out: cardtest1.c cardtest2.c cardtest3.c cardtest4.c unittest1.c
 	./cardtest4 >> unittestresults.out
 	gcov -b dominion.c >> unittestresults.out
 clean:
-	rm -f *.o playdom.exe playdom player player.exe unittest1.exe unittest1 unittest2.exe unittest2 unittest3.exe unittest3 unittest4.exe unittest4 cardtest1.exe cardtest1 cardtest2.exe cardtest2 cardtest3.exe cardtest3 cardtest4.exe cardtest4  *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
+	rm -f *.o playdom.exe playdom player player.exe unittest1.exe unittest1 unittest2.exe unittest2 unittest3.exe unittest3 unittest4.exe unittest4 cardtest1.exe cardtest1 cardtest2.exe cardtest2 cardtest3.exe cardtest3 cardtest4.exe cardtest4 randomtestcard1.exe randomtestcard1 randomtestcard2.exe randomtestcard2 randomtestadventurer.exe randomtestadventurer  *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
