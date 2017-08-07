@@ -33,8 +33,9 @@ int main(int argc, char** argv) {
 
 	for (i = 0; i < numTests; i++) {
 		
-		player = rand() % 3;
+		player = rand() % 3 + 1;
 		initializeGame(4, k, 3, &testGame);
+		testGame.whoseTurn = player;
 		testGame.deckCount[player] = rand() % 50;
 		testGame.handCount[player] = rand() & 50;
 
@@ -50,19 +51,24 @@ int main(int argc, char** argv) {
 		cardEffect(adventurer, choice1, choice2, choice3, &testGame, handPos, &bonus);
 
 		if (testGame.handCount[player] != origNumHand + 2) {
-		//	printf("TEST FAILED: Did not draw correct amount of cards");
+			printf("TEST FAILED: Did not draw correct amount of cards\n");
 			errCount++;
-		}
-		card1 = testGame.hand[player][testGame.handCount[player]] - 1;
+				}
+		card1 = testGame.hand[player][testGame.handCount[player] - 1];
 		if (card1 != copper && card1 != silver && card1 != gold) {
-			//printf("TEST FAILED: Did not draw correct card type");
+			printf("TEST FAILED: Did not draw correct card type, card 1\n");
 			errCount++;
+			printf("card1 = %d\n", card1);
+
+		
 		}
 	
-		card2 = testGame.hand[player][testGame.handCount[player]] - 2;
+		card2 = testGame.hand[player][testGame.handCount[player] - 2];
 		if (card2 != copper && card1 != silver && card1 != gold) {
-			//printf("TEST FAILED: Did not draw correct card type");
+			printf("TEST FAILED: Did not draw correct card type, card 2\n");
 			errCount++;
+			printf("card2 = %d\n", card2);
+
 		}
 
 		}
