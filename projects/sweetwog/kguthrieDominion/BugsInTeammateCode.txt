@@ -1,0 +1,31 @@
+BUG REPORT
+
+Bug Title:  playSmithy() function trashes card 
+Bug ID #1
+Reported By:  Garret Sweetwood
+Date:  08/04/17
+Severity:  Medium
+Priority:  Medium
+File: dominion.c
+Line:  1312,1313 (playSmithy())
+
+Description:	Inappropriate game behavior.   According to the rules of Dominion, after the Smithy card is played, it should be discarded into a ‘discard pile’ and NOT trashed (discarded and not to be used again).  The bug here is the variable trashFlag is set to 1 instead of 0.  This variable is passed to the function discardCard().  When trashFlag = 1 in that function, the card is removed from the game.  This behavior is incorrect.  The trashFlag variable should be 0.
+
+This bug was found using test: randomtestcard1.c
+Error Message:  “TEST FAILED, card trashed”
+
+
+Bug Title:  Too many treasure cards drawn when playAdventurer is called
+Big ID #2
+Reported By:  Garret Sweetwood
+Date:  08/04/17
+Severity:  Medium
+Priority:  Medium
+File: dominion.c
+Line: 1244  (playAdventurer())
+
+Description:  A bug was found in the playAdventurer function.  The proper implementation of the ‘Adventurer’ card is to have the player gain 2 treasure cards from their deck.  The bug here is causing a an additional card to be gained, which is incorrect.  
+
+This bug was found using test: randomtestadventurer.c
+Error Message: “TEST FAILED: Did not draw correct amount of cards”
+
